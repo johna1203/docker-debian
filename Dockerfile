@@ -4,7 +4,8 @@ ADD etc /etc
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
 	apt-get upgrade -y && \
-	apt-get install -y ca-certificates inotify-tools nano pwgen supervisor unrar unzip wget curl && \
+	apt-get install -y ca-certificates inotify-tools nano pwgen supervisor unrar \
+	unzip wget curl git build-essential libssl-dev libffi-dev python-dev && \
 	apt-get clean && \
 	echo -n > /var/lib/apt/extended_states
 
